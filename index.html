@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Felvillanyozódás</title>
+  </head>
+  <body>
+    <div id="menu">
+      <div id="description">
+        <h1>A játék leírása</h1>
+        <ul>
+          <li>
+            A királynak négyzet alapú szobái vannak, amelyek fekete és fehér
+            cellákból állnak.
+          </li>
+          <li>A fehér cellákba villanykörtéket lehet elhelyezni.</li>
+          <li>
+            A villanykörtékből a fény átlósan nem terjed, csak az adott sor és
+            oszlop mentén.
+          </li>
+          <li>
+            A fekete cellákon valamilyen tereptárgy van, ami akadályozza a fény
+            terjedését.
+          </li>
+          <li>
+            A fekete cellák opcionálisan egy egész számot is tartalmazhatnak
+            0-tól 4-ig. Ez azt jelzi, hogy hány szomszédos (alul, felül, jobbra,
+            balra) cella tartalmaz villanykörtét. Ha van ilyen szám, akkor be
+            kell tartani!
+          </li>
+          <li>Két villanykörte soha nem világíthatja meg egymást!</li>
+          <li>
+            A játék célja a villanykörtéket úgy elhelyezni, hogy minden fehér
+            cellát megvilágítsanak.
+          </li>
+          <li>
+            A játékot egy játékos játssza, amíg meg nem oldja a rejtvényt, tehát
+            több játékos egyidejű kezeléséről vagy körökre osztásról nem kell
+            gondoskodni.
+          </li>
+        </ul>
+      </div>
+      <div id="maps">
+        <span>Pálya választás: </span>
+        <select name="maps" id="map">
+          <option value="1" selected>Könnyű 7x7</option>
+          <option value="2">Haladó 7x7</option>
+          <option value="3">Extrém 10x10</option>
+        </select>
+      </div>
+      <div id="in">
+        <span>Játékos név: </span
+        ><input
+          type="text"
+          id="name"
+          size="30"
+          placeholder="name"
+          maxlength="20"
+        />
+        <br />
+        <button id="start" class="start-btn">START</button>
+      </div>
+      <div id="prev-games">
+        <b id="res" class="res-save"
+          >Játékeredmények
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-down-square-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"
+            /></svg
+        ></b>
+        <ul id="res-list" class="hidden"></ul>
+        <br />
+        <br />
+        <br />
+        <b id="save" class="res-save"
+          >Mentések
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-down-square-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"
+            /></svg
+        ></b>
+        <ul id="save-list" class="hidden"></ul>
+      </div>
+    </div>
+    <div id="game" class="hidden">
+      <h1 id="gamename">Name</h1>
+      <h1 id="timer">Eltelt idő: 0</h1>
+      <table id="table"></table>
+      <h1 id="wlh"></h1>
+      <button id="save-btn">Mentés</button>
+      <button id="wl" class="mid-btn">Menu</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

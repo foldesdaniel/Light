@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&display=swap");
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffff0;
+  font-family: "Hubballi", cursive;
+  width: 100%;
+  min-height: 100%;
+}
+
+h1 {
+  margin-left: 25px;
+}
+
+span {
+  margin-left: 25px;
+}
+
+#maps {
+  margin-top: 35px;
+}
+
+div {
+  padding: 8px;
+}
+
+.red {
+  background-color: red;
+}
+
+button {
+  margin-left: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #c0c0c0;
+}
+
+button:hover {
+  box-shadow: 0px 0px 3px 1px #c0c0c0 inset;
+}
+
+.hidden {
+  display: none;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+span {
+  font-size: 1.3rem;
+}
+
+#map {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #c0c0c0;
+  text-align: center;
+  font-size: 2rem;
+  background-color: white;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.white {
+  background-color: white;
+}
+
+.inactiveLink {
+  pointer-events: none;
+}
+
+.mid-btn {
+  /*margin-left: calc(50% - 40px);*/
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+#save-btn {
+  /*margin-left: calc(50% - 60px);*/
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  width: 150px;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+.start-btn {
+  width: 100px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+
+#game {
+  width: 100%;
+  position: relative;
+}
+
+.res-save {
+  margin-left: 25px;
+  font-size: 2rem;
+}
+
+.res-save:hover {
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+
+li {
+  font-size: 1.25rem;
+}
+
+#description {
+  margin-right: 500px;
+}
+
+.continue {
+  width: 80px;
+  font-size: 1rem;
+  border-radius: 10px;
+}
